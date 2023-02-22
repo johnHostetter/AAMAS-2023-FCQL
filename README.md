@@ -1,2 +1,6 @@
-# AAMAS-2023-FCQL
-A systematic design process for a self-organiizing neuro-fuzzy Q-network for model-free and offline reinforcement learning.
+# A Self-Organizing Neuro-Fuzzy Q-Network: Systematic Design with Offline Hybrid Learning
+We propose a systematic design process for a self-organizing neuro-fuzzy Q-network by using two learning paradigms in tandem: unsupervised learning and an offline, model-free fuzzy RL algorithm called Fuzzy Conservative Q-learning (FCQL). 
+
+FCQL is primarily based on Fuzzy Q-Learning, which treats a fuzzy logic rule as a “state” in the environment —similar to how Tabular Q-Learning behaves —and trains Q-values for each of the rule’s possible actions. To prevent overestimating Q-values in the offline setting, we use the updated formula proposed in Conservative Q-Learning (CQL). 
+
+The primary novelty and contribution of this work is the proposal of a systematic design process for a neuro-fuzzy Q-network that works with a model-free offline fuzzy RL algorithm. To the best of our knowledge, existing methods within fuzzy RL are either developed for online interaction due to their dependency on exploration, are unable to accommodate for distributional shift, or rely upon the existence of a simulation; furthermore, the only existing work capable of automatic design for offline fuzzy RL is fuzzy particle swarm RL, but this requires a simulation of real system dynamics that may be impractical for many real-world complex applications such as e-learning and healthcare.
